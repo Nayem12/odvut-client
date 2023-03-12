@@ -1,0 +1,23 @@
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.file-input label {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(231, 228, 228);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+}
