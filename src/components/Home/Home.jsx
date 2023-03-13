@@ -11,6 +11,7 @@ const Home = () => {
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(10);
   const [search, setSearch] = useState('');
+  console.log(search);
   const searchRef = useRef();
   const {
     data: file,
@@ -20,9 +21,9 @@ const Home = () => {
     {
       queryKey: ["fetchedData"],
       queryFn: async () => {
-        const res = await fetch(`https://taskey-server-nayem12.vercel.app/products?page=${page}&size=${size}&search=${search}`, {
+        const res = await fetch(`http://localhost:5000/products?page=${page}&size=${size}&search=${search}`, {
           headers: {
-            // authorization: bearer ${localStorage.getItem("accessToken")},
+            authorization: `bearer ${localStorage.getItem('setToken')}`,
           },
         });
         const data = await res.json();

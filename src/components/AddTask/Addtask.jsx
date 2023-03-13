@@ -30,7 +30,7 @@ const Addtask = () => {
             method: 'POST',
             headers: {
               'content-type': 'application/json',
-              // authorization: `bearer ${localStorage.getItem('setToken')}`
+              authorization: `bearer ${localStorage.getItem('setToken')}`
             },
             body: JSON.stringify(product)
           })
